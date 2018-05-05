@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Congrats!</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/responsiveform.css"></link>
+	<link rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 601px)" href="css/responsiveform1.css" ></link>
+	<link rel="stylesheet" media="screen and (max-width: 600px) and (min-width: 351px)" href="css/responsiveform2.css" ></link>
+	<link rel="stylesheet" media="screen and (max-width: 350px)" href="css/responsiveform3.css" ></link>
+</head>
+<body>
+   	<div id="envelope">
+		<header>
+		    <h2>Congratulations, <span th:text="${name}"></span></h2>
+		    <p>Your severless app is ready!</p>
+		</header>
+		<hr/>
+		<form action="">  
+			<button type="button" th:onclick="'openlink(\''+${url}+'\')'">Click me</button> 
+		</form>
+	</div>
+</body>
+<script>
+function openlink(url){
+	return window.location.href=url;
+}
+</script>
+</html>

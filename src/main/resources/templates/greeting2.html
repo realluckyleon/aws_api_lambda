@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+	    .class{width: 1200px;height: 1000px;background: url("https://s3-us-west-2.amazonaws.com/for-lambda-src-demo/timg.jpeg") no-repeat;}
+	</style>
+</head>
+<body>
+    <p th:text="'Hello, ' + ${name} + '!'" />
+    <a th:href="${url}" target="_blank">Your serverless app is ready</a>
+    <!-- <div class="class">
+    		<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	    <p align="center" style="size=100"  th:text="${name}"></p>
+	</div> -->
+</body>
+</html>
